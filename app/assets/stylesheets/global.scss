@@ -13,7 +13,7 @@ $bodyFont: "Arial";
 body {
   color: $black;
   font-family: $bodyFont;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.5;
   margin: 0;
 }
@@ -80,7 +80,8 @@ textarea {
 nav.filters {
   margin: 0 0 20px 0;
   padding: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: $bodyFont;
   border-bottom: 2px solid $lightyellow;
 
   display: flex;
