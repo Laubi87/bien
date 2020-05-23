@@ -37,6 +37,8 @@ gem "simple_form"
 #make our filters Active
 gem "active_link_to"
 
+
+gem "profanity_filter"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
