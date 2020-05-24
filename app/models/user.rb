@@ -3,7 +3,8 @@ class User < ApplicationRecord
 
   has_many :reviews
   has_many :comments
-
+  has_many :bookmarks
+  
   has_secure_password
 
 
@@ -14,3 +15,4 @@ class User < ApplicationRecord
   def to_param
     username
   end
+end
