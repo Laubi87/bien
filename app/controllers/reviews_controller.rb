@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  #check if logged in
+  before_action :check_login, except: [:index, :show]
 
   def index
     #this is our list page for our reviews
@@ -30,6 +32,9 @@ class ReviewsController < ApplicationController
   def create
     # take info from the form and add it to the model
     @review = Review.new(form_params)
+
+    #and then associate with the user
+    @review = @current_user
 
     # we want to check if the model can be saved
     # if it is we are go the homepage again

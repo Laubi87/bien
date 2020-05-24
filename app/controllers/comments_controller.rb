@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
 
     @comment = @review.comments.new(params.require(:comment).permit(:body))
 
+    @comment.user = @current_user
+
     @comment.save
 
     #go back to review page
