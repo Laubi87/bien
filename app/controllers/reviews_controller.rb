@@ -34,7 +34,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(form_params)
 
     #and then associate with the user
-    @review = @current_user
+    @review.user = @current_user
 
     # we want to check if the model can be saved
     # if it is we are go the homepage again
@@ -70,6 +70,8 @@ class ReviewsController < ApplicationController
 
     if @review.user != @current_user
       redirect_to root_path
+    elsif @review.created_at < 1.hour.ago
+      redirect_to review_path(@review)
     end
   end
 
