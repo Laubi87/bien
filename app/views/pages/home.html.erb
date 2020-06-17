@@ -1,0 +1,13 @@
+<%= image_tag @content.image.url %>
+
+<h1><%= @content.title %></h1>
+
+<%= simple_format @content.body %>
+
+<h2>Highly rated reviews</h2>
+
+<% @highly_rated_reviews.each do |review| %>
+  <p>
+    <%= link_to review.title, review_path(review) %>
+  </p>
+<% end %>

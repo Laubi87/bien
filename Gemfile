@@ -42,6 +42,18 @@ gem "profanity_filter"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+
+gem 'fog-aws'
+
+#add admin panel
+gem 'activeadmin'
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
