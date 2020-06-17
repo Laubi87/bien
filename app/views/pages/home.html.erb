@@ -11,3 +11,11 @@
     <%= link_to review.title, review_path(review) %>
   </p>
 <% end %>
+
+<h2>Bien featured reviews</h2>
+
+<% @featured_reviews.each do |review| %>
+  <p>
+    <%= link_to review.title, review_path(review) %>
+  </p>
+<% end %>
