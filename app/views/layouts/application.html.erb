@@ -29,6 +29,7 @@
 
 
           <%= link_to "Add a review", new_review_path %>
+          <%= link_to "Edit Account", edit_account_path %>
           <%= link_to "Log out",session_path, method: :delete %>
         <% else %>
 
@@ -38,6 +39,13 @@
 
       </nav>
     </header>
+
+    <% if flash[:success].present? %>
+      <div class="success">
+        <%= flash[:success] %>
+      </div>
+    <% end %>
+
     <main>
       <%= yield %>
     <main>
